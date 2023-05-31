@@ -1,0 +1,16 @@
+{% macro Radio(id, label, options, class) %}
+<div class="radio {{class}}">
+  {% if label %}
+  <label class="radio__label">{{label}}</label>
+  {% endif %}
+  <div class="radio__options">
+    {% for option in options %}
+    <input type="radio" id="{{option.value}}" name="{{id}}" value="{{option.value}}" class="radio__option-input" />
+    <label for="{{option.value}}" class="radio__option-label {%if (loop.index == options.length) %}radio__option-label_mr{% endif %}">
+      {{option.option}}
+    </label>
+    <span class="radio error-message"></span>
+    {% endfor %}
+  </div>
+</div>
+{% endmacro %}

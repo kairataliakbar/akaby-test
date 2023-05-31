@@ -1,0 +1,21 @@
+{
+	"extends": ["airbnb-base", "prettier", "eslint-config-prettier"],
+	"env": {
+		"browser": true
+	},
+	"parserOptions": {
+		"parser": "babel-eslint",
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"plugins": ["prettier"],
+	"rules": {
+		"import/prefer-default-export": 0,
+		"no-console": 0,
+		"import/no-extraneous-dependencies": 0,
+		"import/no-dynamic-require": 0,
+		"func-names": 0,
+		"valid-jsdoc": "warn",
+		"require-jsdoc": "warn"
+	}
+}

@@ -1,0 +1,238 @@
+input::-webkit-contacts-auto-fill-button {
+	visibility: hidden;
+	display: none !important;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+}
+
+.form-control {
+	position: relative;
+	width: 100%;
+	input {
+		width: 100%;
+		outline: none;
+		padding: 20px;
+		background-color: #fbfbfb;
+		border: 1px solid #cecece;
+		border-radius: 7px;
+		font-size: rem(16);
+		transition: $tr-primary;
+
+		&::placeholder {
+			font-size: rem(16);
+			color: #bbbbbb;
+		}
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		right: 20px;
+		top: calc(35% - 4px);
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		border: 2px solid $cl-purple;
+		border-top-color: transparent;
+		transition: $tr-primary;
+		animation: rotate 1s linear infinite;
+		opacity: 0;
+	}
+	&.is-active {
+		input {
+			border-color: $cl-purple;
+		}
+		&::after {
+			opacity: 1;
+		}
+	}
+	&.is-error {
+		input {
+			border-color: lightcoral;
+		}
+		span {
+			opacity: 1;
+		}
+	}
+	&.is-success {
+		input {
+			border-color: lightgreen;
+		}
+	}
+	&.is-message {
+		span.form-control--message {
+			opacity: 1;
+			color: $cl-purple !important;
+			font-size: rem(16) !important;
+			display: block;
+		}
+		span.form-control--warn {
+			display: none;
+		}
+	}
+	&--message {
+		display: none;
+		opacity: 0;
+		color: $cl-purple !important;
+		font-size: rem(16) !important;
+	}
+	span {
+		font-size: rem(12);
+		color: lightcoral;
+		opacity: 0;
+		transition: $tr-primary;
+	}
+	[type='date'] {
+		font-family: $f-primary;
+	}
+	[type='date']::-webkit-inner-spin-button {
+		display: none;
+	}
+	[type='date']::-webkit-calendar-picker-indicator {
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	label {
+		font-size: 18px;
+		font-weight: 700;
+		margin-bottom: 5px;
+		display: inline-block;
+	}
+
+	&__block {
+		display: flex;
+		align-items: center;
+		@media (max-width: $sm) {
+			width: 100%;
+			flex-wrap: wrap;
+		}
+		label {
+			font-size: 18px;
+			font-weight: 700;
+			@media (max-width: $sm) {
+				width: 50%;
+				margin: 0;
+				&:first-child {
+					width: 100%;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	&--radio {
+		position: relative;
+		height: 55px;
+		font-size: rem(18);
+		font-weight: 700;
+		color: #282828;
+		padding-left: 65px;
+		margin-left: 40px;
+		display: flex;
+		align-items: center;
+		&.is-active {
+			span {
+				background: $cl-purple;
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+		&-small {
+			font-size: rem(14);
+			padding-left: 35px !important;
+			margin-left: 0;
+			display: inline;
+			text-align: left;
+			a {
+				font-size: inherit !important;
+			}
+			span {
+				width: 24px !important;
+				height: 24px !important;
+			}
+		}
+
+		span {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 55px;
+			height: 55px;
+			display: block;
+			border: 1px solid #cecece;
+			box-sizing: border-box;
+			border-radius: 7px;
+			background: #fbfbfb;
+			overflow: hidden;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -35%);
+				width: 70%;
+				height: 70%;
+				background-image: url('../images/icons/checked.svg');
+				background-size: contain;
+				background-repeat: no-repeat;
+				transition: $tr-primary;
+				opacity: 0;
+			}
+		}
+
+		input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+
+			&:checked ~ span {
+				background: $cl-purple;
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&--date {
+		&:before {
+			content: '';
+			position: absolute;
+			right: 20px;
+			top: calc(60% - 4px);
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			transition: $tr-primary;
+			border: 2px solid rgba(#000, 0.8);
+			border-radius: 2px;
+			border-top-color: transparent;
+			border-left-color: transparent;
+			transform: rotate(45deg);
+		}
+	}
+	&--select {
+		label {
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 5px;
+			display: inline-block;
+		}
+		@media (max-width: $sm) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

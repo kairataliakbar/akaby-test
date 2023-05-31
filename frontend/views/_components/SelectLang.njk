@@ -1,0 +1,12 @@
+{% macro SelectLang(class) %}
+<div class="select-lang {{class}}" tabindex="1">
+  <button type="button" class="select-lang__btn" id="select-lang-btn">
+    <p class="header__language-text">Ru</p>
+  </button>
+  <div id="select-lang-items" class="select-lang__items">
+    <a href="/ru">Ru</a>
+    <a href="/kz">Kk</a>
+    <a href="/uz">Uz</a>
+  </div>
+</div>
+{% endmacro %}

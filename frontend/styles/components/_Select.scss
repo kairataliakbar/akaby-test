@@ -1,0 +1,110 @@
+.select {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	.select-form {
+		width: 100%;
+		position: relative;
+		&.select_disable {
+			.select-form__head {
+				cursor: not-allowed;
+				background: $color-disabled;
+				&:after {
+					border: 4px solid rgb(165, 165, 165);
+					border-top-color: transparent;
+					border-left-color: transparent;
+				}
+			}
+		}
+		&__head {
+			position: relative;
+			background: white;
+			border: 1px solid $color-spindle;
+			border-radius: 13px;
+			transition: $transition-primary;
+			outline: none;
+			padding: 18px 18px 17px;
+			margin-bottom: 21px;
+			text-align: left;
+			@media (max-width: $sm) {
+				width: 100%;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 18px;
+				width: 5px;
+				height: 5px;
+				border: 2px solid $color-secondary;
+				border-radius: 2px;
+				border-top-color: transparent;
+				border-left-color: transparent;
+				transform: translate(-30%, -80%) rotate(45deg);
+			}
+		}
+		&__title {
+			@include base-font-regular($color: $color-spindle);
+
+			&.is-active {
+				color: $color-secondary !important;
+			}
+		}
+		&__options {
+			display: none;
+			position: absolute;
+			top: 52px;
+			width: 100%;
+			height: max-content;
+			// max-height: 0%;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			overflow: hidden;
+			border: 1px solid $color-spindle;
+			border-top: 0px;
+			border-bottom-left-radius: 13px;
+			border-bottom-right-radius: 13px;
+			background-color: #ffffff;
+			transition: $transition-primary;
+			z-index: 30;
+
+			&.is-active {
+				display: block;
+				max-height: 340%;
+				overflow: hidden;
+				overflow-y: scroll;
+				z-index: 30;
+			}
+			li {
+				@include base-font-regular($color: $color-spindle);
+				width: 100%;
+				text-align: left;
+				background: #ffffff;
+				padding: 18px 18px 17px;
+				cursor: pointer;
+				transition: $transition-primary;
+				&.is-active {
+					color: $color-secondary !important;
+				}
+				&:hover {
+					color: $color-secondary !important;
+				}
+			}
+		}
+		&.error-message {
+			position: absolute;
+			left: 12px;
+			bottom: -2px;
+			visibility: hidden;
+			@include small-text($color-error);
+		}
+	}
+
+	&__label {
+		@include base-font-regular();
+		padding-left: 12px;
+		padding-bottom: 12px;
+	}
+}

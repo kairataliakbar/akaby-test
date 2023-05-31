@@ -1,0 +1,24 @@
+html,
+body {
+	height: 100%;
+	margin: 0px;
+	font-size: #{($browser-context) + px};
+	@media (max-width: $small) {
+		font-size: 12px;
+	}
+
+	* {
+		box-sizing: border-box;
+	 }
+ 
+}
+
+body {
+	font-family: $font-secondary-regular;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	font-size: rem(48);
+}

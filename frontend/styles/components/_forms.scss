@@ -1,0 +1,233 @@
+.text-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  @include base-font-regular();
+
+  &__input {
+    width: 100%;
+    padding: 18px 18px 17px;
+    margin-bottom: 21px;
+    background: white;
+    border: 1px solid $color-spindle;
+    border-radius: 13px;
+    @include base-font-regular();
+    transition: $transition-primary;
+    outline: none;
+
+    &::placeholder {
+      color: $color-spindle;
+      transition: $transition-primary;
+    }
+  
+    &:focus {
+      &::placeholder {
+        color: $color-secondary;;
+      }
+      color: $color-secondary;
+    }
+  
+    &:invalid {
+      border-color: $color-error;
+    }
+  
+    &:disabled {
+      background-color: $color-disabled;
+    }
+  }
+
+  &__label {
+    @include base-font-regular();
+    padding-left: 12px;
+    padding-bottom: 12px;
+  }
+
+  &.error-message {
+    position: absolute;
+    left: 12px;
+    bottom: -2px;
+    visibility: hidden;
+    @include small-text($color-error);
+  }
+}
+
+.radio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__label {
+    @include base-font-regular();
+    padding-left: 12px;
+    padding-bottom: 12px;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 21px;
+  }
+
+  &__option-input {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+
+    &:invalid {
+      border-color: $color-error;
+    }
+
+    &:disabled {
+      background-color: $color-disabled;
+    }
+  }
+
+  &__option-input:checked + .radio__option-label {
+    background-color: $color-spindle;
+  }
+
+  &__option-label {
+    max-width: 180px;
+    width: 100%;
+    padding: 18px 0 17px;
+    text-align: center;
+    background-color: $color-white;
+    border: 1px solid $color-spindle;
+    border-radius: 13px;
+    @include base-font-regular();
+    cursor: pointer;
+    transition: $transition-primary;
+    margin-right: 24px;
+
+    &:hover {
+      background-color: $color-spindle;
+    }
+
+    &_mr {
+      margin-right: 0;
+    }
+  }
+
+  &.error-message {
+    position: absolute;
+    left: 12px;
+    bottom: -2px;
+    visibility: hidden;
+    @include small-text($color-error);
+  }
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: $font-secondary-regular;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 157.5%;
+  color: $color-secondary;
+
+  &_m-b-50 {
+    margin-bottom: 50px;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border: 1px solid $color-spindle;
+    border-radius: 7px;
+    transition: $transition-primary;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 8px;
+      top: 4px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+  &__link {
+    font-family: $font-secondary-regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 157.5%;
+    color: $color-secondary;
+    text-decoration: underline;
+    transition: $transition-primary;
+
+    &:hover {
+      color: $color-secondary-lighting;
+    }
+  }
+
+  &__input:checked ~ &__checkmark {
+    background-color: $color-spindle;
+  }
+
+  &__input:checked ~ &__checkmark::after {
+    display: block;
+  }
+
+  & input:checked ~ &:after {
+    display: block;
+  }
+
+  &__input:invalid {
+    &__checkmark {
+      border-color: $color-error;
+    }
+  }
+
+  &__input:disabled {
+    &__checkmark {
+      background-color: $color-disabled;
+    }
+  }
+
+  &:hover &__checkmark {
+    background-color: #1FB141;
+  }
+
+  &.error-message {
+    position: absolute;
+    left: 12px;
+    top: -2px;
+    visibility: hidden;
+    @include small-text($color-error);
+  }
+}
+
+.error-input {
+  border-color: $color-error !important;
+}

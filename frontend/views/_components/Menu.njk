@@ -1,0 +1,29 @@
+{# {% from "../_components/SelectLang.njk" import SelectLang %} #}
+
+<div id="menu" class="menu">
+  <div class="menu__wrapper">
+    <div class="menu__actions">
+      <div class="menu__row">
+        <div class="menu__phone-btns">
+          {# {{ SelectLang() }} #}
+          <button type="button" class="menu__btn" id="profile-btn">
+            <img src="images/svg/profile.svg" alt="profile" width="30" height="30" />
+          </button>
+          <button type="button" class="menu__btn menu__logout" id="logout-btn">Выйти</button>
+        </div>
+        <button type="button" class="menu__btn menu__close" id="close-menu">
+          <img src="images/svg/close.svg" alt="close" width="25" height="25" />
+        </button>
+      </div>
+      <button type="button" class="btn btn_primary menu__phone-btn" id="by-access">Купить доступ</button>
+    </div>
+    <div class="menu__links" id="menu-links">
+      <a href="#picture" class="menu__link">Что ваш ребенок слышит о себе</a>
+      <a href="#info" class="menu__link">Как мы относимся к своему ребенку так к нему будет относится мир</a>
+      <a href="#benefits" class="menu__link">Что вы получаете</a>
+      <a href="#work-info" class="menu__link">Как это работает</a>
+      <a href="#lecturer" class="menu__link">Лектор проекта акаби</a>
+      <a href="#reviews" class="menu__link">Что мамы говорят о полученном опыте</a>
+    </div>
+  </div>
+</div>

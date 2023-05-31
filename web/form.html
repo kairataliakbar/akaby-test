@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Шаблон верстки Ракетной фирмы</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles/vendor.min.css">
+    <link rel="stylesheet" href="styles/main-old.min.css">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <script src="scripts/vendor/modernizr.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="scripts/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <main class="form">
+      <h4 class="form__title">Чтобы начать тест, необходимо ввести данные ребенка</h4>
+      <form id="test-form">
+        <div class="form__row">
+          <div class="text-input form__input">
+            <label for="name" class="text-input__label">Имя ребенка</label>
+            <input type="text" id="name" name="name" class="text-input__input" placeholder="Введите имя" />
+            <span class="text-input error-message"></span>
+          </div>
+          <div class="radio form__input">
+            <label class="radio__label">Пол</label>
+            <div class="radio__options">
+              <input type="radio" id="girl" name="gender" value="girl" class="radio__option-input" />
+              <label for="girl" class="radio__option-label "> Девочка </label>
+              <span class="radio error-message"></span>
+              <input type="radio" id="boy" name="gender" value="boy" class="radio__option-input" />
+              <label for="boy" class="radio__option-label radio__option-label_mr"> Мальчик </label>
+              <span class="radio error-message"></span>
+            </div>
+          </div>
+          <div class="form__space"></div>
+        </div>
+        <div class="form__row">
+          <div class="text-input form__input">
+            <label for="date_birth" class="text-input__label">Дата рождения</label>
+            <input type="text" id="date_birth" name="date_birth" class="text-input__input" placeholder="ДД. ММ. ГГГГ" />
+            <span class="text-input error-message"></span>
+          </div>
+          <div class="select form__input">
+            <label class="select__label" for="country">Страна</label>
+            <div class="select-form" id="country">
+              <div class="select-form__head">
+                <span class="select-form__title">Выбрать страну</span>
+              </div>
+              <input data-select-input id="input-country" name="country" type="hidden" value="">
+              <ul class="select-form__options">
+                <li data-select-value="kazakhstan">Казахстан</li>
+                <li data-select-value="russia">Россия</li>
+                <li data-select-value="uzbekistan">Узбекистан</li>
+              </ul>
+              <span class="select-form error-message"></span>
+            </div>
+          </div>
+          <div class="select form__input">
+            <label class="select__label" for="city">Город</label>
+            <div class="select-form" id="city">
+              <div class="select-form__head">
+                <span class="select-form__title">Выбрать город</span>
+              </div>
+              <input data-select-input id="input-city" name="city" type="hidden" value="">
+              <ul class="select-form__options">
+                <li data-select-value="astana">Нур-Султан (Астана)</li>
+                <li data-select-value="karaganda">Караганда</li>
+                <li data-select-value="moscow">Москва</li>
+              </ul>
+              <span class="select-form error-message"></span>
+            </div>
+          </div>
+        </div>
+        <div class="form__button-container">
+          <button type="submit" id="form-start" class="btn">Начать тест</button>
+          <button type="submit" id="form-later" class="form__btn-link">Пройти тест позже</button>
+        </div>
+      </form>
+      <span class="form__extra-text">Дайте вашему ребенку 10 минут для прохождения теста самостоятельно</span>
+    </main>
+    <script src="scripts/vendor.min.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- page scripts start -->
+    <script src="scripts/app.bundle.js"></script>
+    <!-- page scripts end -->
+  </body>
+</html>

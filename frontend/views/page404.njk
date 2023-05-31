@@ -1,0 +1,19 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+<main class="page404">
+  <h2 class="page404__title">Ошибка 404</h2>
+  <span class="page404__message">
+    Кажется что-то пошло не так. Страница, которую вы запрашиваете, не существует. Возможно она устарела, была
+    удалена, или был введен неверный адрес в адресной строке.
+  </span>
+  <div class="page404__button-container">
+    <button type="button" class="btn" id="navigation-on-main">Перейти на главную</button>
+  </div>
+  <img alt="flower" src="images/svg/flower.svg" class="page404__bg-icon_left-flower" />
+  <img alt="flower" src="images/svg/flower.svg" class="page404__bg-icon_right-flower" />
+  <img alt="heart" src="images/svg/heart-secondary.svg" class="page404__bg-icon_left-heart" />
+  <img alt="heart" src="images/svg/heart-primary.svg" class="page404__bg-icon_right-heart" />
+  {% include "_blocks/help-button.njk" %}
+</main>
+{% endblock %}

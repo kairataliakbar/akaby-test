@@ -1,0 +1,49 @@
+.profits {
+	&-list {
+		list-style: none;
+		padding: 0;
+
+		li {
+			position: relative;
+			padding-left: 35px;
+			&::before {
+				content: '' !important;
+				position: absolute !important;
+				top: rem(8);
+				left: 0;
+				width: 15px !important;
+				height: 15px !important;
+				background: $gr-pink-l !important;
+				border-radius: 50%;
+				display: block;
+			}
+		}
+	}
+	.double__block {
+		&:nth-child(1) {
+			@media (max-width: $md) {
+				order: 1;
+			}
+		}
+		&:nth-child(2) {
+			@media (max-width: $md) {
+				order: 0;
+			}
+		}
+		&:nth-child(3) {
+			@media (max-width: $md) {
+				order: 2;
+			}
+		}
+		&:nth-child(4) {
+			@media (max-width: $md) {
+				order: 3;
+			}
+		}
+		img {
+			@media (max-width: $sm) {
+				width: 80%;
+			}
+		}
+	}
+}

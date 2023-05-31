@@ -1,0 +1,76 @@
+.btn {
+	height: 61px;
+	padding: 20px 30px;
+	background-color: $color-secondary;
+	color: $color-white;
+	border: 0;
+	border-radius: 59px;
+	font-family: $font-secondary-regular !important;
+	font-style: normal;
+	font-weight: 600 !important;
+	font-size: 14px;
+	text-align: center;
+	line-height: 150.52%;
+	white-space: nowrap;
+	transition: $transition-primary;
+	outline: none;
+	cursor: pointer;
+	transition: $transition-primary;
+	opacity: 1;
+
+	&:disabled {
+		opacity: 0.7;
+		cursor: no-drop;
+	}
+
+	&:hover,
+	&:active {
+		background-color: $color-secondary-lighting;
+	}
+
+	&_primary {
+		background-color: $color-primary;
+
+		&:hover,
+		&:active {
+			background-color: $color-primary-lighting;
+		}
+	}
+}
+
+.circle-btn {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 0px;
+	padding: 0px;
+	color: $color-white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: $transition-primary;
+	outline: none;
+	transition: $transition-primary;
+	cursor: pointer;
+	opacity: 1;
+
+	&:disabled {
+		opacity: 0.7;
+		cursor: no-drop;
+	}
+
+	&:hover,
+	&:active {
+		background-color: $color-secondary-lighting;
+	}
+
+	&_primary {
+		background-color: $color-primary;
+
+		&:hover,
+		&:active {
+			background-color: $color-primary-lighting;
+		}
+	}
+}
+

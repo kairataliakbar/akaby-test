@@ -1,0 +1,44 @@
+{% extends "layouts/wrapper.njk" %}
+{% from "_components/TextInput.njk" import TextInput %}
+{% from "_components/Select.njk" import Select %}
+{% from "_components/Radio.njk" import Radio %}
+
+{% set genders = [
+  {value: 'girl', option: 'Девочка'},
+  {value: 'boy', option: 'Мальчик'}
+] %}
+
+{% set countries = [
+	{value: 'kazakhstan', option: 'Казахстан'},
+	{value: 'russia', option: 'Россия'},
+	{value: 'uzbekistan', option: 'Узбекистан'}
+] %}
+
+{% set cities = [
+  {value: 'astana', option: 'Нур-Султан (Астана)'},
+  {value: 'karaganda', option: 'Караганда'},
+  {value: 'moscow', option: 'Москва'}
+] %}
+
+{% block content %}
+<main class="form">
+  <h4 class="form__title">Чтобы начать тест, необходимо ввести данные ребенка</h4>
+  <form id="test-form">
+    <div class="form__row">
+      {{ TextInput(id='name', label='Имя ребенка', placeholder='Введите имя', class='form__input') }}
+      {{ Radio(id='gender', label='Пол', options=genders, class='form__input') }}
+      <div class="form__space"></div>
+    </div>
+    <div class="form__row">
+      {{ TextInput(id='date_birth', label='Дата рождения', placeholder='ДД. ММ. ГГГГ', class='form__input') }}
+      {{ Select(id='country', label='Страна', data=countries, title='Выбрать страну', class='form__input') }}
+      {{ Select(id='city', label='Город', data=cities, title='Выбрать город', class='form__input') }}
+    </div>
+    <div class="form__button-container">
+      <button type="submit" id="form-start" class="btn">Начать тест</button>
+      <button type="submit" id="form-later" class="form__btn-link">Пройти тест позже</button>
+    </div>
+  </form>
+  <span class="form__extra-text">Дайте вашему ребенку 10 минут для прохождения теста самостоятельно</span>
+</main>
+{% endblock %}

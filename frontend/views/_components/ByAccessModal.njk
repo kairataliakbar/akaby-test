@@ -1,0 +1,32 @@
+{% from "../_partials/mixins.njk" import icon %}
+
+{% macro ByAccessModal(id) %}
+<div id="{{id}}" class="modal__wrapper">
+	<div class="modal modal_m-t">
+		<button class="modal__close">{{icon('close')}}</button>
+		<article class="modal__content">
+			<h2 class="modal__title">Купить доступ</h2>
+      <span class="modal__desc">После оплаты откроется доступ к прохожнению теста и к видео-материалам</span>
+      <div class="modal__payment-methods">
+        <div class="payment-method">
+          <div class="payment-method__icon">
+            <img alt="card" src="images/card.png" width="62" height="38" />
+          </div>
+          <button type="button" class="btn payment-method__btn" id="profile-btn">Оплатить картой</button>
+        </div>
+        <div class="payment-method">
+          <div class="payment-method__icon">
+            <img alt="kaspi" src="images/kaspi.png" width="55" height="54" />
+          </div>
+          <button type="button" class="btn btn_primary payment-method__btn">Оплатить Kaspi</button>
+        </div>
+      </div>
+      <div class="modal__extra">
+        <span class="modal__extra-text">
+          при нажатии данной кнопки вы будете переведны в WhatsApp или Instagram для связи с оператором.
+        </span>
+      </div>
+    </article>
+	</div>
+</div>
+{% endmacro %}

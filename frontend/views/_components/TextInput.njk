@@ -1,0 +1,9 @@
+{% macro TextInput(id, type='text', label, placeholder="Введите текст", class) %}
+<div class="text-input {{class}}">
+  {% if label %}
+  <label for="{{id}}" class="text-input__label">{{label}}</label>
+  {% endif %}
+  <input type="{{type}}" id="{{id}}" name="{{id}}" class="text-input__input" placeholder="{{placeholder}}" />
+  <span class="text-input error-message"></span>
+</div>
+{% endmacro %}

@@ -1,0 +1,66 @@
+{% extends "layouts/default.njk" %}
+{% from "_components/VideoModal.njk" import VideoModal %}
+
+{% block content %}
+<main class="personal-area-child">
+  {{ VideoModal('video-one-modal', videoUrl = 'videos/old_man.mp4') }}
+  {{ VideoModal('video-two-modal', videoUrl = 'videos/space.mp4') }}
+  <section class="title-container">
+    <h2 class="title-container__title">Личный кабинет</h2>
+    <div class="title-container__breadcrumb">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb__item" aria-current="page">
+            <a href="main.html" class="link">Главная</a>
+          </li>
+          <li class="breadcrumb__item" aria-current="page">
+            <a href="personal-area-children.html" class="link">Личный кабинет</a>
+          </li>
+          <li class="breadcrumb__item" aria-current="page">
+            <a href="personal-area-child.html" class="link">Алина</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+  <section class="personal-area-child__before-test">
+    <div class="test-card">
+      <h4 class="test-card__title">Пройти тест</h4>
+      <span class="test-card__desc">
+        Объясните ребёнку цель прохождения тестирования. Важно, чтобы ребёнок выбирал ответы  самостоятельно.
+        Тест состоит только из картинок. В случае, если ребёнок сомневается в выборе картинки, объясните что нет
+        правильных и не правильных ответов. Он может выбрать любую.
+      </span>
+      <button type="button" class="btn">Пройти тест</button>
+    </div>
+  </section>
+  <section class="personal-area-child__lectures">
+    <div class="lecture">
+      <button type="button" class="lecture__btn lecture__btn_play" id="play-video-one">
+        <img class="lecture__btn-img" alt="lecture one" src="images/lecture-one.png" />
+      </button>
+      <span class="lecture__title">Лекция «Я не идеальная мама»</span>
+      <span class="lecture__desc">
+        Видео о маме для мамы. Основные причины, которые забирают у мамы ресурс. Когнитивные искажения, которые
+        мешают здоровому контакту с ребенком.  Психология ребенка и ключи к здоровому диалогу.
+      </span>
+    </div>
+    <div class="lecture">
+      <button type="button" class="lecture__btn" id="play-video-two">
+        <img class="lecture__btn-img" alt="lecture three" src="images/lecture-three.png" />
+      </button>
+      <span class="lecture__title">Персональные рекомендации</span>
+      <span class="lecture__desc">
+        На основании выявленного типа, вам открывается доступ к лекции об особенностях взаимодействия именно
+        с вашим ребенком. Основы экологичного общения и понимания своего ребенка, техники для мотивации.
+      </span>
+    </div>
+  </section>
+  <section class="personal-area-child__after-test">
+    <div class="test-card">
+      <h4 class="test-card__title">Результаты теста</h4>
+      <button type="button" class="test-card__link-btn">Скачать PDF</button>
+    </div>
+  </section>
+</main>
+{% endblock %}

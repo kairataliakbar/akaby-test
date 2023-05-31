@@ -1,0 +1,130 @@
+.menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: $color-grey;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: $transition-primary;
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__actions {
+    width: 100%;
+    padding: 38px 40px;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    @include phone() {
+      flex-direction: column;
+    }
+  }
+
+  &__row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    @include phone() {
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__phone-btns {
+    display: none;
+    width: 40%;
+    flex-direction: row;
+    justify-content: space-between;
+    @include phone() {
+      display: flex;
+    }
+  }
+
+  &__phone-btn {
+    display: none;
+    @include phone() {
+      display: block;
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: auto 0;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    transition: $transition-primary;
+    opacity: 1;
+    transition: $transition-primary;
+    &:hover {
+        opacity: 0.7;
+    }
+  }
+
+  &__logout {
+    font-family: $font-secondary-regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150.52%;
+    color: $color-secondary;
+  }
+
+  &__close {
+    color: $color-spindle;
+    width: 25px;
+    height: 25px;
+    transform-origin: center;
+    &:hover {
+        transform: rotate(180deg);
+    }
+  }
+
+  &__language-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150.52%;
+    color: $color-secondary;
+    margin: 0;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1 0;
+    margin: 20px 88px 0 88px;
+    @include phone() {
+      margin: 20px 38px;
+    }
+  }
+
+  &__link {
+    font-family: $font-primary-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 150.52%;
+    color: $color-secondary;
+    text-decoration: none;
+    margin-bottom: 28px;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

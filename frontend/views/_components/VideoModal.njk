@@ -1,0 +1,29 @@
+{% from "../_partials/mixins.njk" import icon %}
+
+{% macro VideoModal(id, videoUrl, poster, isNoAccess = false) %}
+<div id="{{id}}" class="modal__wrapper video-modal__wrapper">
+  <button class="modal__close video-modal__close" id="video-modal-close">{{icon('close')}}</button>
+	<div class="modal video-modal">
+		<button class="modal__close" id="video-modal-close">{{icon('close')}}</button>
+    <article class="video-modal__content">
+      <video
+        id="video"
+        class="video-js vjs-theme-city vjs-big-play-centered video-modal__video"
+        controls
+        preload="auto"
+        poster="{{poster}}"
+        data-setup="{}"
+        data-is-no-access="{{isNoAccess}}"
+      >
+        <source src="{{videoUrl}}" type="video/mp4" />
+      </video>
+      {% if isNoAccess %}
+      <div id="locked-video" class="video-modal__locked">
+        <span class="video-modal__locked-text">Для дальнейшего просмотра видео необходимо купить доступ</span>
+        <button type="button" class="btn btn_primary video-modal__locked-btn" id="by-access-in-video-modal">Купить доступ</button>
+      </div>
+      {% endif %}
+    </article>
+  </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,61 @@
+// fonts
+$font-primary-regular: 'PIPS', Arial, sans-serif;
+$font-secondary-regular: 'Montserrat Alternates', Arial, sans-serif;
+$font-icons: 'websymbolsligaregular';
+$font-numbers: 'Helvetica Neue', Arial, sans-serif;
+
+$f-primary: 'Nunito', sans-serif;
+
+// colors
+$color-primary: #E88075;
+$color-secondary: #063854;
+$color-spindle: #A7BDD3;
+$color-error: #E88075;
+$color-grey: #F4F9FB;
+$color-white: #FFFFFF;
+$color-disabled: #F9F9F9;
+
+$color-primary-lighting: #FB8679;
+$color-secondary-lighting: #064B72;
+
+$cl-purple: #6f026d;
+$cl-pink: #c56fd8;
+$cl-blue: #c2f5fa;
+
+$browser-context: 16; // Default
+
+// gradients
+$gr-blue: linear-gradient(317.28deg, #c2f5fa 26.59%, #dffafd 75.02%);
+$gr-pink: radial-gradient(
+		402.67% 94.82% at 113.67% 102.12%,
+		#f6cfff 0%,
+		#fcefff 100%
+	),
+	#ffffff;
+$gr-pink-l: linear-gradient(1.72deg, #bd67d0 1.51%, #ea96fd 98.59%);
+
+// transitions
+$transition-primary: 0.4s;
+$tr-primary: 0.25s;
+
+$imgBase: '../images/';
+
+$small: 560px;
+$middle: 760px;
+$tablet: 1000px;
+$laptop: 1170px;
+$desktop: 1300px;
+$wide: 1400px;
+$large: 1800px;
+
+// breakpoints
+$xs: 360px;
+$xsm: 374px;
+$sm: 560px;
+$smd: 780px;
+$md: 1000px;
+$slg: 1025px;
+$lg: 1200px;
+$xlg: 1370px;
+$xxlg: 1450px;
+$ulg: 1925px;

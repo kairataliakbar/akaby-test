@@ -1,0 +1,48 @@
+{% extends "layouts/wrapper.njk" %}
+
+{% block content %}
+<main class="test">
+  <section class="test old-test">
+    <div class="test__fraction">
+      <span id="current">1</span>/<span id="total">5</span>
+    </div>
+    <h2 class="test__title">Выбери одну из картинок</h2>
+    <div class="test__app">
+      <article data-question-id="1" class="question is-active">
+        <button data-id="1" class="answer">
+          <figure><img src="images/assets/test-1.png" alt=""></figure>
+        </button>
+        <button data-id="2" class="answer">
+          <figure><img src="images/assets/test-2.png" alt=""></figure>
+        </button>
+      </article>
+
+      <article data-question-id="2" class="question">
+        <button data-id="1" class="answer">
+          <figure><img src="images/assets/test-3.jpg" alt=""></figure>
+        </button>
+        <button data-id="2" class="answer">
+          <figure><img src="images/assets/test-4.jpg" alt=""></figure>
+        </button>
+      </article>
+
+      <article data-question-id="3" class="question">
+        <button data-id="1" class="answer">
+          <figure><img src="images/assets/test-5.jpg" alt=""></figure>
+        </button>
+        <button data-id="2" class="answer">
+          <figure><img src="images/assets/test-6.jpg" alt=""></figure>
+        </button>
+      </article>
+
+      <article data-question-id="4" class="question">
+        <button data-id="1" class="answer">
+          <figure><img src="images/assets/test-5.jpg" alt=""></figure>
+        </button>
+        <button data-id="2" class="answer">
+          <figure><img src="images/assets/test-3.jpg" alt=""></figure>
+        </button>
+      </article>
+  </section>
+</main>
+{% endblock %}

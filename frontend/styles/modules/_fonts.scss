@@ -1,0 +1,49 @@
+@mixin font($alias, $name, $weight) {
+	@font-face {
+		font-family: $alias;
+		src: url('../fonts/'+$name+'.woff2') format('woff2'),
+			url('../fonts/'+$name+'.woff') format('woff'),
+			url('../fonts/'+$name+'.ttf') format('truetype'),
+			url('../fonts/'+$name+'.eot'),
+			url('../fonts/'+$name+'.eot?#iefix') format('embedded-opentype');
+		font-weight: $weight;
+		font-display: swap;
+	}
+}
+
+@font-face {
+	font-family: 'websymbolsligaregular';
+	src: url('../fonts/websymbolsligaregular.eot');
+	src: url('../fonts/websymbolsligaregular.eot?#iefix')
+			format('embedded-opentype'),
+		url('../fonts/websymbolsligaregular.woff') format('woff'),
+		url('../fonts/websymbolsligaregular.ttf') format('truetype'),
+		url('../fonts/websymbolsligaregular.svg#WebSymbolsRegular') format('svg');
+}
+
+@font-face {
+	font-family: 'PIPS';
+	src: url('../fonts/PIPSRegular.woff2') format('woff2'),
+		url('../fonts/PIPSRegular.woff') format('woff'),
+		url('../fonts/PIPSRegular.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat Alternates';
+	src: url('../fonts/MontserratAlternates-Regular.woff2') format('woff2'),
+		url('../fonts/MontserratAlternates-Regular.woff') format('woff'),
+		url('../fonts/MontserratAlternates-Regular.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+		url('../fonts/Roboto-Regular.woff') format('woff'),
+		url('../fonts/Roboto-Regular.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}

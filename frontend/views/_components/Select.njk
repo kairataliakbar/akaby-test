@@ -1,0 +1,32 @@
+{% set initData = [
+  {
+    value: 'full_time',
+    option: 'Full time'
+  }, {
+    value: 'part_time',
+    option: 'Part time'
+  }, {
+    value: 'distance',
+    option: 'Distance'
+  }
+] %}
+
+{% macro Select(id, label, data = initData , title = "Выбрать", class) %}
+<div class="select {{class}}">
+  {% if label %}
+  <label class="select__label" for="{{id}}">{{label}}</label>
+  {% endif %}
+  <div class="select-form" id="{{id}}">
+    <div class="select-form__head">
+      <span class="select-form__title">{{title}}</span>
+    </div>
+    <input data-select-input id="input-{{id}}" name="{{id}}" type="hidden" value="">
+    <ul class="select-form__options">
+      {% for item in data %}
+      <li data-select-value="{{item.value}}">{{item.option}}</li>
+      {% endfor %}
+    </ul>
+    <span class="select-form error-message"></span>
+  </div>
+</div>
+{% endmacro %}

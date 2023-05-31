@@ -1,0 +1,218 @@
+{% extends "layouts/default.njk" %}
+{% from "_components/VideoModal.njk" import VideoModal %}
+
+{% block content %}
+<main class="main">
+  {{ VideoModal('video-one-modal', videoUrl = './videos/old_man.mp4', isNoAccess = true) }}
+  <section class="welcome">
+    <h1 class="welcome__title">Привет, добро пожаловать в akaby</h1>
+    <p class="welcome__subtitle">
+      Мы помогаем настроить диалог с ребенком и подготовить его к уверенной жизни, в которой он сможет быть собой.
+    </p>
+    <div class="welcome__information">
+      <img alt="sun" src="images/svg/sun.svg" width="60" height="60" />
+      <span class="welcome__information-text">Для родителей детей от 5 до 12 лет</span>
+    </div>
+    <img alt="flower" src="images/svg/flower.svg" class="welcome__bg-icon_left-flower" />
+    <img alt="flower" src="images/svg/flower.svg" class="welcome__bg-icon_right-flower" />
+    <img alt="heart secondary" src="images/svg/heart-secondary.svg" class="welcome__bg-icon_left-heart" />
+    <img alt="heart primary" src="images/svg/heart-primary.svg" class="welcome__bg-icon_right-heart" />
+  </section>
+  <section class="picture" id="picture">
+    <div class="picture__title-container">
+      <span class="picture__text">Что ваш ребенок слышит о себе?</span>
+      <h2 class="picture__title">ВАШИ СЛОВА СТАНУТ ВНУТРЕННИМ ГОЛОСОМ РЕБЕНКА НА ВСЮ ЖИЗНЬ</h2>
+    </div>
+    <span class="picture__text">
+      Мы верим, что диалог между детьми и родителями, должен приносить только взаимное удовольствие.
+      Миссия нашего проекта – помочь вырастить поколение счастливых детей.
+    </span>
+  </section>
+  <section class="info" id="info">
+    <img alt="info" src="images/info-image.png" class="info__info-image" />
+    <div class="info__content">
+      <h2 class="info__title">
+        Как мы относимся к своему ребенку, так к нему будет относиться и весь мир
+      </h2>
+      <br/>
+      <span class="info__text">
+        Задавались ли вы вопросом, в какой момент ребенок становится личностью у которой есть право на свое мнение?
+        Вы удивитесь, но это происходит с самого раннего детства. Если вовремя не разглядеть и не принять эту личность,
+        ребенок не сможет развивать свои таланты, он будет продолжать сопротивляться и бунтовать. Это нормальная
+        реакция защиты.
+      </span>
+      <br/>
+      <span class="info__text">
+        <strong>
+          Мы помогаем понять ребенка, встать на его место, увидеть в нем человека и самостоятельную личность.
+        </strong>
+      </span>
+    </div>
+    <img alt="flower" src="images/svg/flower.svg" class="info__bg-icon_left-flower" />
+    <img alt="flower" src="images/svg/flower.svg" class="info__bg-icon_right-flower" />
+    <img alt="heart" src="images/svg/heart-secondary.svg" class="info__bg-icon_left-heart" />
+    <img alt="heart" src="images/svg/heart-secondary.svg" class="info__bg-icon_right-heart" />
+  </section>
+  <section class="benefits" id="benefits">
+    <h2 class="benefits__title">ЧТО ВЫ ПОЛУЧАЕТЕ?</h2>
+    <div class="benefit">
+      <img alt="benefit image" src="images/svg/benefit-speak.svg" class="benefit__image"/>
+      <div class="benefit__space"></div>
+      <div class="benefit__content">
+        <h3 class="benefit__content-title benefit__content-title_primary">КАК ОБЩАТЬСЯ</h3>
+        <span class="benefit__content-text">
+          Портрет вашего ребенка: особенности, таланты и скрытые интересы. Как не потерять контакт с ребенком? Как сохранить теплые и доверительные отношения.
+        </span>
+      </div>
+      <img alt="heart" src="images/svg/heart-primary.svg" class="benefit__bg-icon_left-heart-primary" />
+      <img alt="heart" src="images/svg/heart-primary.svg" class="benefit__bg-icon_right-heart-primary" />
+    </div>
+    <div class="benefit benefit_reverse">
+      <img alt="benefit image" src="images/svg/benefit-treaty.svg" class="benefit__image"/>
+      <div class="benefit__space"></div>
+      <div class="benefit__content">
+        <h3 class="benefit__content-title benefit__content-title_sinbad">КАК ДОГОВОРИТЬСЯ</h3>
+        <span class="benefit__content-text">
+          Как договориться о выполнении действий, которые он не любит? Какая мотивация подходит именно вашему малышу?
+        </span>
+      </div>
+      <img alt="flower" src="images/svg/flower.svg" class="benefit__bg-icon_left-flower" />
+      <img alt="flower" src="images/svg/flower.svg" class="benefit__bg-icon_right-flower" />
+    </div>
+    <div class="benefit">
+      <img alt="benefit image" src="images/svg/benefit-technics.svg" class="benefit__image"/>
+      <div class="benefit__space"></div>
+      <div class="benefit__content">
+        <h3 class="benefit__content-title benefit__content-title_spindle">ТЕХНИКИ</h3>
+        <span class="benefit__content-text">
+          Где маме брать ресурс, когда не остается сил? Как вырастить личность, которая знает чего хочет? Как помочь ему развивать необходимые навыки?
+        </span>
+      </div>
+      <img alt="heart" src="images/svg/heart-secondary.svg" class="benefit__bg-icon_left-heart-secondary" />
+      <img alt="heart" src="images/svg/heart-secondary.svg" class="benefit__bg-icon_right-heart-secondary" />
+    </div>
+  </section>
+  <section class="work-info" id="work-info">
+    <h2 class="work-info__title">Как это работает?</h2>
+    <h3 class="work-info__subtitle">
+      Начните диалог по-новому уже сегодня. Узнайте своего ребенка и найдите правильный подход
+    </h3>
+    <div class="work-info__lectures">
+      <div class="lecture">
+        <button type="button" id="play-video-one" class="lecture__btn lecture__btn_play">
+          <img alt="lecture image one" src="images/video-one.png" class="lecture__preview" />
+        </button>
+        <span class="lecture__title">Лекция “Я не идеальная мама”</span>
+        <span class="lecture__description">
+          Видео о маме для мамы. Основные причины, которые забирают у мамы ресурс. Когнитивные искажения,
+          которые мешают здоровому контакту с ребенком. Психология ребенка и ключи к здоровому диалогу. 
+        </span>
+      </div>
+      <div class="lecture">
+        <button type="button" class="lecture__btn">
+          <img alt="lecture image two" src="images/lecture-two.png" class="lecture__preview" />
+        </button>
+        <span class="lecture__title">Детский тест по уникальной методике</span>
+        <span class="lecture__description">
+          Ребенок проходит короткий тест, который состоит только из картинок. Это нужно для определения
+          психотипа вашего малыша. Проективная методика профессора Князева, МГУ.
+        </span>
+      </div>
+      <div class="lecture">
+        <button type="button" class="lecture__btn">
+          <img alt="lecture image three" src="images/lecture-three.png" class="lecture__preview" />
+        </button>
+        <span class="lecture__title">Персональные рекомендации</span>
+        <span class="lecture__description">
+          На основании выявленного типа, вам открывается доступ к лекции об особенностях взаимодействия именно
+          с вашим ребенком. Основы экологичного общения и понимания своего ребенка, техники для мотивации.
+        </span>
+      </div>
+    </div>
+    <div class="work-info__btn-container">
+      <button type="button" class="btn btn_primary" id="by-access">Купить доступ</button>
+    </div>
+    <p class="work-info__text">После оплаты откроется доступ к прохождению теста и к видео-материалам.</p>
+    <img alt="flower" src="images/svg/flower.svg" class="work-info__bg-icon_left-flower" />
+    <img alt="flower" src="images/svg/flower.svg" class="work-info__bg-icon_right-flower" />
+    <img alt="heart" src="images/svg/heart-primary.svg" class="work-info__bg-icon_left-heart" />
+    <img alt="heart" src="images/svg/heart-primary.svg" class="work-info__bg-icon_right-heart" />
+  </section>
+  <section class="lecturer" id="lecturer">
+    <h2 class="lecturer__title">Лектор проекта Akabi</h2>
+    <p class="lecturer__person">Балсулу Тасбулатова</p>
+    <div class="lecturer__info-container">
+      <img alt="lecturer" src="images/lecturer.png" class="lecturer__person-image" />
+      <div class="lecturer__space"></div>
+      <div class="lecturer__content">
+        <div class="lecturer__text">
+          <p><strong>Мама, которой не все равно</strong></p>
+          <span>
+            «10 лет я занималась консультированием взрослых, пока не осознала одну важную вещь: все мои взрослые
+            клиенты — это дети, которые когда-то не получили должной поддержки. Дети, которых не научили слышать
+            себя и свои желания, а только подчиняться навязанным кем-то правилам».
+          </span>
+          <p>
+            <strong>«Я увидела своей целью решать корень проблемы, а не работать со следствием. Я увидела четкую
+              миссию: помогать родителям воспитывать счастливое поколение. Поколение, которому не придётся ходить
+              к психологам и искать любви и принятия во взрослой жизни».
+            </strong>
+          </p>
+        </div>
+        <a href="https://www.instagram.com/balsulu.tasbulatova/" target="_blank" class="link">
+          <img alt="instagram" src="images/svg/instagram-circle-vector.svg" width="50" height="50" />
+        </a>
+      </div>
+      <img alt="flower" src="images/svg/flower.svg" class="info-container__bg-icon_left-flower" />
+      <img alt="flower" src="images/svg/flower.svg" class="info-container__bg-icon_right-flower" />
+      <img alt="heart" src="images/svg/heart-primary.svg" class="info-container__bg-icon_left-heart" />
+      <img alt="heart" src="images/svg/heart-primary.svg" class="info-container__bg-icon_right-heart" />
+    </div>
+  </section>
+  <section class="reviews" id="reviews">
+    <h2 class="reviews__title">Что мамы говорят о полученном опыте</h2>
+    <div class="swiper-container reviews__slider">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide review">
+            <img alt="profile" src="images/avatar.png" width="32" height="32" />
+            <p class="review__text">
+              <strong>ospanova_gulnara</strong> Балсулу, огромное спасибо за то что вы есть на этой планете! За то, что вы
+              делитесь своими знаниями, своим опытом! За то, что вы огранизовали такой марафон, который трансформирует
+              мышление о многом... Все эфиры я прослушала по несколько раз и думаю еще не раз буду к ним возвращаться!
+            </p>
+            <button type="button" class="review__icon-btn">
+              <img alt="like" src="images/svg/like.svg" width="14" height="12" />
+            </button>
+          </div>
+          <div class="swiper-slide review">
+            <img alt="profile" src="images/avatar.png" width="32" height="32" />
+            <p class="review__text">
+              <strong>ospanova_gulnara</strong> Балсулу, огромное спасибо за то что вы есть на этой планете! За то, что вы
+              делитесь своими знаниями, своим опытом! За то, что вы огранизовали такой марафон, который трансформирует
+              мышление о многом... Все эфиры я прослушала по несколько раз и думаю еще не раз буду к ним возвращаться!
+            </p>
+            <button type="button" class="review__icon-btn">
+              <img alt="like" src="images/svg/like.svg" width="14" height="12" />
+            </button>
+          </div>
+      </div>
+      <div class="reviews__pagination">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <img alt="flower" src="images/svg/flower.svg" class="reviews__bg-icon_left-flower" />
+    <img alt="flower" src="images/svg/flower.svg" class="reviews__bg-icon_right-flower" />
+    <img alt="heart" src="images/svg/heart-secondary.svg" class="reviews__bg-icon_left-heart" />
+    <img alt="heart" src="images/svg/heart-secondary.svg" class="reviews__bg-icon_right-heart" />
+    <img alt="cloud primary" src="images/svg/cloud-primary.svg" class="reviews__bg-icon_left-cloud-primary" />
+    <img alt="cloud primary" src="images/svg/cloud-primary.svg" class="reviews__bg-icon_right-cloud-primary" />
+    <img alt="cloud secondary" src="images/svg/cloud-secondary.svg" class="reviews__bg-icon_left-cloud-secondary" />
+    <img alt="cloud secondary" src="images/svg/cloud-secondary.svg" class="reviews__bg-icon_right-cloud-secondary" />
+    <img alt="rainbow" src="images/svg/rainbow.svg" class="reviews__bg-icon_left-rainbow" />
+    <img alt="rainbow" src="images/svg/rainbow.svg" class="reviews__bg-icon_right-rainbow" />
+  </section>
+  {% include "_blocks/help-button.njk" %}
+</main>
+{% endblock %}

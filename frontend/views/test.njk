@@ -1,0 +1,16 @@
+{% extends "layouts/wrapper.njk" %}
+
+{% block content %}
+<main class="test">
+  <span class="test__number">4/45</span>
+  <h2 class="test__title">Выбери одну из картинок</h2>
+  <div class="test__images">
+    <button type="button" class="test__image-btn">
+      <img alt="image car" src="images/car.png" class="test__image" />
+    </button>
+    <button type="button" class="test__image-btn">
+      <img alt="image dog" src="images/dog.png" class="test__image" />
+    </button>
+  </div>
+</main>
+{% endblock %}

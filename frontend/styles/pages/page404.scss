@@ -1,0 +1,71 @@
+.page404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__title {
+    @include h2();
+    margin-top: 150px;
+    margin-bottom: 13px;
+  }
+
+  &__message {
+    @include base-font-regular();
+    text-align: center;
+    max-width: 662px;
+    width: 80%;
+    margin-bottom: 70px;
+  }
+
+  &__button-container {
+    margin-bottom: 200px;
+  }
+
+  &__bg-icon {
+    &_left-flower {
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      left: 93px;
+      top: 240px;
+      @include tablet() {
+        display: none !important;
+      }
+    }
+
+    &_right-flower {
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      right: 140px;
+      bottom: 230px;
+      @include tablet() {
+        display: none !important;
+      }
+    }
+
+    &_left-heart {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 203px;
+      bottom: 200px;
+      @include tablet() {
+        display: none !important;
+      }
+    }
+
+    &_right-heart {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 92px;
+      top: 200px;
+      @include tablet() {
+        display: none !important;
+      }
+    }
+  }
+}

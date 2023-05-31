@@ -1,0 +1,43 @@
+{% from "../_partials/mixins.njk" import icon %}
+{% from "../_components/TextInput.njk" import TextInput %}
+{% from "../_components/Select.njk" import Select %}
+
+{% set countries = [
+	{value: '+{7} (000) 000-00-00', option: 'Казахстан'},
+	{value: '+{7} (000) 000-00-00', option: 'Россия'},
+	{value: '+(000) 00-000-00-00', option: 'Узбекистан'}
+] %}
+
+{% macro AuthModal(id) %}
+<div id="{{id}}" class="modal__wrapper">
+	<div class="modal">
+		<button class="modal__close">{{icon('close')}}</button>
+		<article class="modal__content">
+			<h2 class="modal__title">Авторизация</h2>
+			<div class="auth-steps">
+				<section id="auth-step-1" class="auth-step is-active">
+					<h5 class="modal__desc">Введите номер телефона, куда мы отправим код активации личного кабинета</h5>
+					<form class="modal__form">
+						{{ Select(id='country', data=countries, title='Выбрать страну') }}
+						{{ TextInput(id='phone', type='tel', placeholder='+7 (000) 000-00-00') }}
+						<button type="button" class="btn" id="next-step-auth">Отправить код</button>
+					</form>
+				</section>
+
+				<section id="auth-step-2" class="auth-step">
+					<h5 class="modal__desc">Введите код из СМС</h5>
+					<form class="modal__form">
+						{{ TextInput(id='sms-code', placeholder='_ _ _ _') }}
+						<label class="checkbox checkbox_m-b-50"> Я выражаю согласие на <a href="#" class="checkbox__link">обработку персональных данных</a>
+							<input type="checkbox" id="agreement" name="agreement" value="agreement" class="checkbox__input">
+							<span for="agreement" class="checkbox__checkmark"></span>
+						</label>
+						<button type="submit" class="btn" id="auth-activation">Активировать</button>
+						<button type="button" class="modal__btn-link" id="prev-step-auth">назад</button>
+					</form>
+				</section>
+			</div>
+    </article>
+	</div>
+</div>
+{% endmacro %}

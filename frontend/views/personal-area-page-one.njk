@@ -1,0 +1,71 @@
+{% extends "layouts/default.njk" %}
+{% from "_components/VideoModal.njk" import VideoModal %}
+
+{% block content %}
+<main class="personal-area-page-one">
+  {{ VideoModal('video-one-modal', videoUrl = 'videos/old_man.mp4', isNoAccess = true) }}
+  {{ VideoModal('video-two-modal', videoUrl = 'videos/space.mp4', isNoAccess = true) }}
+  <section class="title-container">
+    <h2 class="title-container__title">Личный кабинет</h2>
+    <div class="title-container__breadcrumb">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb__item" aria-current="page">
+            <a href="main.html" class="link">Главная</a>
+          </li>
+          <li class="breadcrumb__item" aria-current="page">
+            <a href="personal-area-page-one.html" class="link">Личный кабинет</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div class="title-container__profile-tel">
+      <span class="profile-tel__text">Авторизованный номер телефона</span>
+      <span class="profile-tel__tel">+7 777 897 345</span>
+    </div>
+  </section>
+  <section class="lectures">
+    <div class="lecture">
+      <div class="lecture__description">
+        <span class="lecture__title">Лекция “Я не идеальная мама”</span>
+        <span class="lecture__text">
+          Видео о маме для мамы. Основные причины, которые забирают у мамы ресурс. Когнитивные искажения, которые мешают
+          здоровому контакту с ребенком. Психология ребенка и ключи к здоровому диалогу.
+        </span>
+      </div>
+      <button type="button" class="lecture__btn lecture__btn_play" id="play-video-one">
+        <img alt="lecture image one" src="images/lecture-one.png" class="lecture__btn-img" />
+      </button>
+    </div>
+    <div class="lecture">
+      <div class="lecture__description">
+        <span class="lecture__title">Детский тест по уникальной методике</span>
+        <span class="lecture__text">
+          Ребенок проходит короткий тест, который состоит только из картинок. Это нужно для определения психотипа
+          вашего малыша. Проективная методика профессора Князева, МГУ.
+        </span>
+      </div>
+      <button type="button" class="lecture__btn">
+        <img alt="lecture image two" src="images/lecture-two.png" class="lecture__btn-img" />
+      </button>
+    </div>
+    <div class="lecture">
+      <div class="lecture__description">
+        <span class="lecture__title">Персональные рекомендации</span>
+        <span class="lecture__text">
+          На основании выявленного типа, вам открывается доступ к лекции об особенностях взаимодействия именно
+          с вашим ребенком. Основы экологичного общения и понимания своего ребенка, техники для мотивации.
+        </span>
+      </div>
+      <button type="button" class="lecture__btn" id="play-video-two">
+        <img alt="lecture image three" src="images/lecture-three.png" class="lecture__btn-img" />
+      </button>
+    </div>
+  </section>
+  <span class="personal-area-page-one__extra-text">После оплаты откроется доступ к прохожнению теста и к видео-материалам</span>
+  <div class="personal-area-page-one__button-container">
+    <button type="button" class="btn btn_primary" id="by-access">Купить доступ</button>
+  </div>
+  {% include "_blocks/help-button.njk" %}
+</main>
+{% endblock %}

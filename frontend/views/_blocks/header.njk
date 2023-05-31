@@ -1,0 +1,27 @@
+{% from "../_components/ByAccessModal.njk" import ByAccessModal %}
+{# {% from "../_components/SelectLang.njk" import SelectLang %} #}
+
+<header class="header">
+  {{ ByAccessModal('by-access-modal') }}
+  <div class="header__container">
+    <div class="header__inner">
+      <a href="main.html" class="header__link">
+        <img src="images/svg/logo.svg" alt="logo" class="header__logo" />
+      </a>
+      <div class="header__actions" id="header-actions">
+        <div class="header__by-access-btn">
+          <button type="button" class="btn btn_primary" id="by-access">Купить доступ</button>
+        </div>
+        {# {{ SelectLang('header__btn') }} #}
+        <button type="button" class="header__btn header__btn-profile" id="profile-btn">
+          <img src="images/svg/profile.svg" alt="profile" width="30" height="30" />
+        </button>
+        <button type="button" class="header__btn header__btn-logout" id="logout-btn">Выйти</button>
+        <button type="button" class="header__btn header__btn-menu" id="open-menu">
+          <img src="images/svg/menu.svg" alt="menu" width="20" height="13" />
+        </button>
+      </div>
+    </div>
+  </div>
+  {% include "_components/Menu.njk" %}
+</header>

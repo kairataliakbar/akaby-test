@@ -1,0 +1,53 @@
+.help-btn {
+  position: fixed;
+  bottom: 110px;
+  right: 130px;
+  z-index: 20;
+
+  @include phone() {
+    bottom: 110px;
+    right: 40px;
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: -56px;
+    left: -220px;
+    padding: 12px 14px;
+    background-color: $color-secondary;
+    border-radius: 2px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity $transition-primary;
+
+    &::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: $color-secondary;
+      position: absolute;
+      top: 38px;
+      right: 30px;
+      transform: rotate(45deg);
+      
+      @include phone() {
+        top: 36px;
+      }
+    }
+  }
+
+  &__tooltip-text {
+    font-family: $font-secondary-regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 157.5%;
+    color: white;
+    white-space: nowrap;
+  }
+
+  &:hover &__tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+}

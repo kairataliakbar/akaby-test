@@ -1,0 +1,186 @@
+.personal-area-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    max-width: 1180px;
+    height: 200px;
+    @include phone() {
+      width: 100%;
+      margin-bottom: 42px;
+    }
+
+    &__title {
+      @include h2();
+      margin: 0px;
+    }
+
+    &__breadcrumb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include phone() {
+        left: 10%;
+      }
+    }
+  }
+
+  &__before-test {
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__after-test {
+    width: 100%;
+    margin-bottom: 87px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .test-card {
+    max-width: 976px;
+    min-height: 400px;
+    width: 100%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-grey;
+    border-radius: 50px;
+    @include tablet() {
+      width: 80%;
+      padding: 60px 0;
+    }
+    @include phone() {
+      width: 90%;
+      padding: 60px 0;
+    }
+
+    &__title {
+      @include h4();
+      width: 80%;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &__desc {
+      @include h6();
+      width: 80%;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 42px;
+    }
+
+    &__link-btn {
+      padding: 80px 0 0 0;
+      margin: 0;
+      outline: none;
+      cursor: pointer;
+      border: 0;
+      position: relative;
+      @include h6();
+      background-color: transparent;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &::before {
+        content: url('../images/download-file.png');
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 46px;
+        height: 64px;
+      }
+    }
+  }
+
+  &__lectures {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 82px;
+
+    @include tablet() {
+      flex-direction: column;
+    }
+
+    .lecture {
+      display: flex;
+      flex-direction: column;
+      margin: 0 14px;
+      max-width: 575px;
+      width: 50%;
+
+      @include tablet() {
+        max-width: 100%;
+        width: 80%;
+        margin: 0;
+      }
+
+      @include phone() {
+        width: 90%;
+      }
+
+      &__btn {
+        max-height: 320px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 44px;
+        border: 0;
+        border-radius: 40px;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        &-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        &_play::before {
+          background-image: url(../images/svg/play-icon.svg);
+          background-size: 60px 70px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          width: 60px;
+          height: 70px;
+          content: '';
+        }
+      }
+
+      &__title {
+        @include h5();
+        width: 100%;
+        margin-bottom: 14px;
+      }
+
+      &__desc {
+        @include base-font-regular();
+        width: 100%;
+        margin-bottom: 45px;
+      }
+    }
+  }
+}

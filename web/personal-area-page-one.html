@@ -1,0 +1,267 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Шаблон верстки Ракетной фирмы</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles/vendor.min.css">
+    <link rel="stylesheet" href="styles/main-old.min.css">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <script src="scripts/vendor/modernizr.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="scripts/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="header">
+      <div id="by-access-modal" class="modal__wrapper">
+        <div class="modal modal_m-t">
+          <button class="modal__close"><svg class="svg-icon svg-icon-close">
+              <use xlink:href="images/symbol/svg/sprite.symbol.svg#close"></use>
+            </svg></button>
+          <article class="modal__content">
+            <h2 class="modal__title">Купить доступ</h2>
+            <span class="modal__desc">После оплаты откроется доступ к прохожнению теста и к видео-материалам</span>
+            <div class="modal__payment-methods">
+              <div class="payment-method">
+                <div class="payment-method__icon">
+                  <img alt="card" src="images/card.png" width="62" height="38" />
+                </div>
+                <button type="button" class="btn payment-method__btn" id="profile-btn">Оплатить картой</button>
+              </div>
+              <div class="payment-method">
+                <div class="payment-method__icon">
+                  <img alt="kaspi" src="images/kaspi.png" width="55" height="54" />
+                </div>
+                <button type="button" class="btn btn_primary payment-method__btn">Оплатить Kaspi</button>
+              </div>
+            </div>
+            <div class="modal__extra">
+              <span class="modal__extra-text"> при нажатии данной кнопки вы будете переведны в WhatsApp или Instagram для связи с оператором. </span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="header__container">
+        <div class="header__inner">
+          <a href="main.html" class="header__link">
+            <img src="images/svg/logo.svg" alt="logo" class="header__logo" />
+          </a>
+          <div class="header__actions" id="header-actions">
+            <div class="header__by-access-btn">
+              <button type="button" class="btn btn_primary" id="by-access">Купить доступ</button>
+            </div>
+            <button type="button" class="header__btn header__btn-profile" id="profile-btn">
+              <img src="images/svg/profile.svg" alt="profile" width="30" height="30" />
+            </button>
+            <button type="button" class="header__btn header__btn-logout" id="logout-btn">Выйти</button>
+            <button type="button" class="header__btn header__btn-menu" id="open-menu">
+              <img src="images/svg/menu.svg" alt="menu" width="20" height="13" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="menu" class="menu">
+        <div class="menu__wrapper">
+          <div class="menu__actions">
+            <div class="menu__row">
+              <div class="menu__phone-btns">
+                <button type="button" class="menu__btn" id="profile-btn">
+                  <img src="images/svg/profile.svg" alt="profile" width="30" height="30" />
+                </button>
+                <button type="button" class="menu__btn menu__logout" id="logout-btn">Выйти</button>
+              </div>
+              <button type="button" class="menu__btn menu__close" id="close-menu">
+                <img src="images/svg/close.svg" alt="close" width="25" height="25" />
+              </button>
+            </div>
+            <button type="button" class="btn btn_primary menu__phone-btn" id="by-access">Купить доступ</button>
+          </div>
+          <div class="menu__links" id="menu-links">
+            <a href="#picture" class="menu__link">Что ваш ребенок слышит о себе</a>
+            <a href="#info" class="menu__link">Как мы относимся к своему ребенку так к нему будет относится мир</a>
+            <a href="#benefits" class="menu__link">Что вы получаете</a>
+            <a href="#work-info" class="menu__link">Как это работает</a>
+            <a href="#lecturer" class="menu__link">Лектор проекта акаби</a>
+            <a href="#reviews" class="menu__link">Что мамы говорят о полученном опыте</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="personal-area-page-one">
+      <div id="video-one-modal" class="modal__wrapper video-modal__wrapper">
+        <button class="modal__close video-modal__close" id="video-modal-close"><svg class="svg-icon svg-icon-close">
+            <use xlink:href="images/symbol/svg/sprite.symbol.svg#close"></use>
+          </svg></button>
+        <div class="modal video-modal">
+          <button class="modal__close" id="video-modal-close"><svg class="svg-icon svg-icon-close">
+              <use xlink:href="images/symbol/svg/sprite.symbol.svg#close"></use>
+            </svg></button>
+          <article class="video-modal__content">
+            <video id="video" class="video-js vjs-theme-city vjs-big-play-centered video-modal__video" controls preload="auto" poster="" data-setup="{}" data-is-no-access="true">
+              <source src="videos/old_man.mp4" type="video/mp4" />
+            </video>
+            <div id="locked-video" class="video-modal__locked">
+              <span class="video-modal__locked-text">Для дальнейшего просмотра видео необходимо купить доступ</span>
+              <button type="button" class="btn btn_primary video-modal__locked-btn" id="by-access-in-video-modal">Купить доступ</button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div id="video-two-modal" class="modal__wrapper video-modal__wrapper">
+        <button class="modal__close video-modal__close" id="video-modal-close"><svg class="svg-icon svg-icon-close">
+            <use xlink:href="images/symbol/svg/sprite.symbol.svg#close"></use>
+          </svg></button>
+        <div class="modal video-modal">
+          <button class="modal__close" id="video-modal-close"><svg class="svg-icon svg-icon-close">
+              <use xlink:href="images/symbol/svg/sprite.symbol.svg#close"></use>
+            </svg></button>
+          <article class="video-modal__content">
+            <video id="video" class="video-js vjs-theme-city vjs-big-play-centered video-modal__video" controls preload="auto" poster="" data-setup="{}" data-is-no-access="true">
+              <source src="videos/space.mp4" type="video/mp4" />
+            </video>
+            <div id="locked-video" class="video-modal__locked">
+              <span class="video-modal__locked-text">Для дальнейшего просмотра видео необходимо купить доступ</span>
+              <button type="button" class="btn btn_primary video-modal__locked-btn" id="by-access-in-video-modal">Купить доступ</button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <section class="title-container">
+        <h2 class="title-container__title">Личный кабинет</h2>
+        <div class="title-container__breadcrumb">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb__item" aria-current="page">
+                <a href="main.html" class="link">Главная</a>
+              </li>
+              <li class="breadcrumb__item" aria-current="page">
+                <a href="personal-area-page-one.html" class="link">Личный кабинет</a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="title-container__profile-tel">
+          <span class="profile-tel__text">Авторизованный номер телефона</span>
+          <span class="profile-tel__tel">+7 777 897 345</span>
+        </div>
+      </section>
+      <section class="lectures">
+        <div class="lecture">
+          <div class="lecture__description">
+            <span class="lecture__title">Лекция “Я не идеальная мама”</span>
+            <span class="lecture__text"> Видео о маме для мамы. Основные причины, которые забирают у мамы ресурс. Когнитивные искажения, которые мешают здоровому контакту с ребенком. Психология ребенка и ключи к здоровому диалогу. </span>
+          </div>
+          <button type="button" class="lecture__btn lecture__btn_play" id="play-video-one">
+            <img alt="lecture image one" src="images/lecture-one.png" class="lecture__btn-img" />
+          </button>
+        </div>
+        <div class="lecture">
+          <div class="lecture__description">
+            <span class="lecture__title">Детский тест по уникальной методике</span>
+            <span class="lecture__text"> Ребенок проходит короткий тест, который состоит только из картинок. Это нужно для определения психотипа вашего малыша. Проективная методика профессора Князева, МГУ. </span>
+          </div>
+          <button type="button" class="lecture__btn">
+            <img alt="lecture image two" src="images/lecture-two.png" class="lecture__btn-img" />
+          </button>
+        </div>
+        <div class="lecture">
+          <div class="lecture__description">
+            <span class="lecture__title">Персональные рекомендации</span>
+            <span class="lecture__text"> На основании выявленного типа, вам открывается доступ к лекции об особенностях взаимодействия именно с вашим ребенком. Основы экологичного общения и понимания своего ребенка, техники для мотивации. </span>
+          </div>
+          <button type="button" class="lecture__btn" id="play-video-two">
+            <img alt="lecture image three" src="images/lecture-three.png" class="lecture__btn-img" />
+          </button>
+        </div>
+      </section>
+      <span class="personal-area-page-one__extra-text">После оплаты откроется доступ к прохожнению теста и к видео-материалам</span>
+      <div class="personal-area-page-one__button-container">
+        <button type="button" class="btn btn_primary" id="by-access">Купить доступ</button>
+      </div>
+      <a href="https://wa.me/+77762762525" target="_blank" rel="noopener noreferrer" type="button" class="help-btn circle-btn circle-btn_primary">
+        <img alt="help button" src="images/svg/double-line.svg" class="help-btn__icon" width="20" height="17" />
+        <div class="help-btn__tooltip">
+          <span class="help-btn__tooltip-text">Ответим на интересующие вас вопросы</span>
+        </div>
+      </a>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__inner">
+          <span class="footer__company-name">© Akaby2020</span>
+          <div class="footer__socials">
+            <a href="mailto:support@akaby.world" class="footer__email link"> support@akaby.world </a>
+            <a href="https://www.instagram.com/balsulu.tasbulatova/" target="_blank" class="footer__instagram link">
+              <img alt="instagram" src="images/svg/instagram.svg" width="25" height="25" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="auth-modal" class="modal__wrapper">
+      <div class="modal">
+        <button class="modal__close"><svg class="svg-icon svg-icon-close">
+            <use xlink:href="images/symbol/svg/sprite.symbol.svg#close"></use>
+          </svg></button>
+        <article class="modal__content">
+          <h2 class="modal__title">Авторизация</h2>
+          <div class="auth-steps">
+            <section id="auth-step-1" class="auth-step is-active">
+              <h5 class="modal__desc">Введите номер телефона, куда мы отправим код активации личного кабинета</h5>
+              <form class="modal__form">
+                <div class="select ">
+                  <div class="select-form" id="country">
+                    <div class="select-form__head">
+                      <span class="select-form__title">Выбрать страну</span>
+                    </div>
+                    <input data-select-input id="input-country" name="country" type="hidden" value="">
+                    <ul class="select-form__options">
+                      <li data-select-value="+{7} (000) 000-00-00">Казахстан</li>
+                      <li data-select-value="+{7} (000) 000-00-00">Россия</li>
+                      <li data-select-value="+(000) 00-000-00-00">Узбекистан</li>
+                    </ul>
+                    <span class="select-form error-message"></span>
+                  </div>
+                </div>
+                <div class="text-input ">
+                  <input type="tel" id="phone" name="phone" class="text-input__input" placeholder="+7 (000) 000-00-00" />
+                  <span class="text-input error-message"></span>
+                </div>
+                <button type="button" class="btn" id="next-step-auth">Отправить код</button>
+              </form>
+            </section>
+            <section id="auth-step-2" class="auth-step">
+              <h5 class="modal__desc">Введите код из СМС</h5>
+              <form class="modal__form">
+                <div class="text-input ">
+                  <input type="text" id="sms-code" name="sms-code" class="text-input__input" placeholder="_ _ _ _" />
+                  <span class="text-input error-message"></span>
+                </div>
+                <label class="checkbox checkbox_m-b-50"> Я выражаю согласие на <a href="#" class="checkbox__link">обработку персональных данных</a>
+                  <input type="checkbox" id="agreement" name="agreement" value="agreement" class="checkbox__input">
+                  <span for="agreement" class="checkbox__checkmark"></span>
+                </label>
+                <button type="submit" class="btn" id="auth-activation">Активировать</button>
+                <button type="button" class="modal__btn-link" id="prev-step-auth">назад</button>
+              </form>
+            </section>
+          </div>
+        </article>
+      </div>
+    </div>
+    <script src="scripts/vendor.min.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- page scripts start -->
+    <script src="scripts/app.bundle.js"></script>
+    <!-- page scripts end -->
+  </body>
+</html>

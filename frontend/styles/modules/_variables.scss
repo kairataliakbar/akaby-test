@@ -1,0 +1,49 @@
+@function rem($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}rem;
+}
+
+$browser-context: 16;
+
+// fonts
+$font-primary-regular: 'PIPS', Arial, sans-serif;
+$font-secondary-regular: 'Montserrat Alternates', Arial, sans-serif;
+
+$font-icons: 'websymbolsligaregular';
+
+$font-numbers: 'Helvetica Neue', Arial, sans-serif;
+
+// colors
+$color-primary: #E88075;
+$color-secondary: #063854;
+$color-spindle: #A7BDD3;
+$color-error: #E88075;
+$color-grey: #F4F9FB;
+$color-white: #FFFFFF;
+$color-disabled: #F9F9F9;
+
+$color-primary-lighting: #FB8679;
+$color-secondary-lighting: #064B72;
+
+// transitions
+$transition-primary: 0.4s;
+
+$imgBase: '../images/';
+
+$small: 560px;
+$middle: 760px;
+$tablet: 1000px;
+$laptop: 1170px;
+$desktop: 1300px;
+$wide: 1400px;
+$large: 1800px;
+
+// breakpoints
+$xs: 380px;
+$sm: 560px;
+$smd: 780px;
+$md: 1000px;
+$slg: 1025px;
+$lg: 1285px;
+$xlg: 1370px;
+$xxlg: 1445px;
+$xxxlg: 1925px;

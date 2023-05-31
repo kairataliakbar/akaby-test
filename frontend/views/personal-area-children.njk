@@ -1,0 +1,42 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+<main class="personal-area-children">
+  <section class="title-container">
+    <h2 class="title-container__title">Личный кабинет</h2>
+    <div class="title-container__breadcrumb">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb__item" aria-current="page">
+            <a href="main.html" class="link">Главная</a>
+          </li>
+          <li class="breadcrumb__item" aria-current="page">
+            <a href="personal-area-children.html" class="link">Личный кабинет</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div class="title-container__profile-tel">
+      <span class="profile-tel__text">Авторизованный номер телефона</span>
+      <span class="profile-tel__tel">+7 777 897 345</span>
+    </div>
+  </section>
+  <section class="children">
+    <div class="child">
+      <h3 class="child__name">Алина</h3>
+      <span class="child__info">5 лет, Алматы</span>
+      <button type="button" class="btn">Перейти к материалам</button>
+    </div>
+    <div class="child">
+      <h3 class="child__name">Алина</h3>
+      <span class="child__info">5 лет, Алматы</span>
+      <button type="button" class="btn">Перейти к материалам</button>
+    </div>
+    <div class="child-btn">
+      <h4 class="child-btn__title">Добавить ребенка</h4>
+      <span class="child-btn__desc">После оплаты откроется доступ к прохожнению теста и к видео-материалам</span>
+      <button type="button" class="btn btn_primary" id="by-access">Купить доступ</button>
+    </div>
+  </section>
+</main>
+{% endblock %}
